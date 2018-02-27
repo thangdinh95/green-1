@@ -12,6 +12,9 @@
       },{
         "title": "Sidebar General",
         "url": "sidebar-general"
+      },{
+        "title": "Sidebar News",
+        "url": "sidebar-news"
       }
     ]
   }

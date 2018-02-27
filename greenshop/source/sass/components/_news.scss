@@ -1,0 +1,35 @@
+.smallnews {
+  float: left;
+  &__link {
+    display:flex;
+    justify-content: space-between;
+    &:hover {
+      color: $color_green;
+    }
+  }
+  &__title {
+    font-size: 12px;
+    padding: 5px 0 0 12px;
+  }
+  &__index {
+    margin-top: 20px;
+  }
+}
+.homenews {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.homenews-card {
+  border-radius: 0;
+  border: 0;
+}
+.homenews-img {
+  overflow: hidden;
+  &__top {
+    border-radius: 0;
+    transition: 0.4s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

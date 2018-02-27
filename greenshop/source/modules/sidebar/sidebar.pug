@@ -43,3 +43,14 @@ mixin sidebar(type, data)
           a(href="#!").sidebar-tabcolor__link
             i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--pink
             | Hồng
+    if (type==='news')
+      h5.sidebar__heading.sidebar__heading--medium Tin tức nổi bật
+      .sidebar-tab
+        each item in data.newsindex
+          +small-news(item.img, item.article)
+      h5.sidebar__heading.sidebar__heading--short Blog tag
+      ul.sidebar-tabtag
+        each item in data.tagindex
+          li.sidebar-tabtag__item
+            button.btn.sidebar-tabtag__btn
+              | #{item}
