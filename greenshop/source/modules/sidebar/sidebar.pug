@@ -1,0 +1,57 @@
+include ../news/news.pug
+
+mixin sidebar(type, data)
+  aside.sidebar
+    h5.sidebar__heading Danh mục sản phẩm
+    ul.sidebar-tab
+      each item in data.productindex
+        li.sidebar-tab__item
+          a(href="#!").sidebar-tab__link
+            i.sidebar-tab__icon.fa.fa.fa-angle-right
+            | #{item}
+    if (type==='general')
+      h5.sidebar__heading.sidebar__heading--shot Tìm theo giá
+      ul.sidebar-tab
+        each item in data.pricefilter
+          a(href="#!").sidebar-tab__link
+            li.sidebar-tab__item
+              i.sidebar-tab__icon.fa.fa.fa-angle-right
+              | #{item}
+      h5.sidebar__heading.sidebar__heading--shot Tìm theo màu
+      ul.sidebar-tabcolor
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--green
+            | Xanh cây
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--purple
+            | Tím
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--yellow
+            | Vàng
+      ul.sidebar-tabcolor
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--red
+            | Đỏ cam
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--blue
+            | Xanh trời
+        li.sidebar-tabcolor__item
+          a(href="#!").sidebar-tabcolor__link
+            i.sidebar-tabcolor__icon.sidebar-tabcolor__icon--pink
+            | Hồng
+    if (type==='news')
+      h5.sidebar__heading.sidebar__heading--medium Tin tức nổi bật
+      ul.sidebar-tab
+        each item in data.newsindex
+          +small-news(item.img, item.article)
+      h5.sidebar__heading.sidebar__heading--short Blog tag
+      ul.sidebar-tabtag
+        each item in data.tagindex
+          li.sidebar-tabtag__item
+            button.btn.sidebar-tabtag__btn
+              | #{item}

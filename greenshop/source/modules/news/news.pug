@@ -1,0 +1,8 @@
+mixin small-news(img, article)
+  .smallnews
+    ul.smallnews__tab
+      li.smallnews__index
+        a(href="").smallnews__link
+          img.smallnews__img(src=img, alt="")
+          h6.smallnews__title
+            | #{article}
