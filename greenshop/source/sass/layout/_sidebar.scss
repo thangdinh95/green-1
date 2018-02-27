@@ -1,0 +1,120 @@
+.sidebar {
+  font-size: 12px;
+  color: $color_topnav_text;
+  &__heading {
+    font-family: $roboto-slab;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color_green;
+    padding-top: 32px;
+    margin-bottom: 29px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color_banner_search_border;
+      position: absolute;
+      z-index:0;
+      bottom: -11px;
+      left: 0;
+    }
+    &::before {
+      content: "";
+      width: 160px;
+      height: 3px;
+      background-color: $color_green;
+      position: absolute;
+      z-index: 1;
+      bottom: -12px;
+      left: 0;
+    }
+    &--medium {
+      &::before {
+        width: 130px;
+      }
+    }
+    &--short {
+      &::before {
+        width: 65px;
+      }
+    }
+  }
+}
+.sidebar-tab{
+  overflow: hidden;
+  &__item {
+    float: none;
+    border-bottom: 1px solid $color_banner_search_border;
+    padding: 10px 0;
+    &:hover {
+      color: $color_green;
+      cursor: pointer;
+    }
+  }
+  &__icon {
+    margin-right: 5px;
+  }
+}
+.sidebar-tabcolor {
+  &__item {
+    width: 50%;
+    float: left;
+    &:hover {
+      color: $color_green;
+      cursor: pointer;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+  }
+  &__icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+    &--green {
+      background-color: $color_greensidebar;
+    }
+    &--red {
+      background-color: $color_redsidebar;
+    }
+    &--purple {
+      background-color: $color_purple;
+    }
+    &--yellow {
+      background-color: $color_yellowsidebar;
+    }
+    &--blue {
+      background-color: $color_blue;
+    }
+    &--pink {
+      background-color: $color_pink;
+    }
+  }
+}
+.sidebar-tabtag {
+  &__item {
+    margin: 0 10px 10px 0;
+  }
+  &__btn {
+    background-color: transparent;
+    border: 1px solid $color_topnav_text;
+    border-radius: 0;
+    font-size: 12px;
+    color: $color_topnav_text;
+    padding: 6px 18px;
+    &:hover {
+      background-color: $color_green;
+      color: $color_white;
+      border: 1px solid $color_green;
+    }
+    @include respond-to ('desktop-and-down') {
+      padding: 6px 9px;
+    }
+  }
+}
