@@ -1,0 +1,11 @@
+mixin banner
+  section.banner
+    .carousel.slide.my-carousel(data-ride="carousel")
+      ol.carousel-indicators.banner-indicators
+        li.banner-indicators__item.active(data-target=".my-carousel" data-slide-to="0")
+        li.banner-indicators__item(data-target=".my-carousel" data-slide-to="1")
+        li.banner-indicators__item(data-target=".my-carousel" data-slide-to="2")
+      .banner-inside.carousel-inner
+        .carousel-item.banner-inside__item.item-1.active
+        .carousel-item.banner-inside__item.item-2
+        .carousel-item.banner-inside__item.item-3
