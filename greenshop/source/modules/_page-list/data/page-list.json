@@ -9,6 +9,9 @@
       },{
         "title": "banner",
         "url": "banner"
+      },{
+        "title": "Sidebar General",
+        "url": "sidebar-general"
       }
     ]
   }
